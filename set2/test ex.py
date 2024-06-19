@@ -52,33 +52,10 @@ def loops_preview():
     """Make 8 poops.
 
     Using a for loop
-    return a list of 8 items, each one a string with exacly one 💩 in it.
-    E.g.: ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
-    """
-    choc_list = []
-    for i in range(8):
-        choc_list.append("💩")
-    return choc_list
-
-def loops_preview():
-    """Make 8 poops.
-
-    Using a for loop
     return a list of 8 items, each one a string with exactly one 💩 in it.
     E.g.: ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
     """
     return ["💩" for _ in range(8)]
-
-
-def loops_1a():
-    """Make 10 stars.
-
-    Using a for loop
-    return a list of 10 items, each one a string with exacly one star in it.
-    E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
-    """
-    return None
-
 
 def loops_1a():
     """Make 10 stars.
@@ -87,23 +64,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exactly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    star_list = []
-    for _ in range(10):
-        star_list.append('*')
-    return star_list
-
-def loops_1c(number_of_items=5, symbol="#"):
-    """Respond to variables.
-
-    Return a list of number_of_items items, each one a
-    string with exacly one symbol in it.
-    E.g.: ['#', '#', '#', '#', '#']
-
-    Remember that you're being passed arguments here. Don't hard code the number
-    or the symbol, let it be whatever it wants to be.
-    """
-    return None
-
+    return ["*" for _ in range(10)]
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
@@ -116,28 +77,6 @@ def loops_1c(number_of_items=5, symbol="#"):
     or the symbol, let it be whatever it wants to be.
     """
     return [symbol for _ in range(number_of_items)]
-
-
-def loops_2_preview():
-    """Make a big square 💩field.
-
-    return a list of 4 items, each one a list of 4 items,
-    each one of those, a string with exacly one star in it.
-    E.g.: [
-            ['💩', '💩', '💩', '💩'],
-            ['💩', '💩', '💩', '💩'],
-            ['💩', '💩', '💩', '💩'],
-            ['💩', '💩', '💩', '💩'],
-          ]
-    """
-    field = []
-    for i in range(4):
-        row = []
-        for j in range(4):
-            row.append("💩")
-        field.append(row)
-    return field
-
 
 def loops_2_preview():
     """Make a big square 💩field.
@@ -152,27 +91,6 @@ def loops_2_preview():
           ]
     """
     return [["💩" for _ in range(4)] for _ in range(4)]
-
-def loops_2():
-    """Make a big square starfield.
-
-    return a list of 10 items, each one a list of 10 items,
-    each one of those, a string with exacly one star in it.
-    E.g.: [
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-          ]
-    """
-    return None
-
 
 def loops_2():
     """Make a big square starfield.
@@ -193,29 +111,6 @@ def loops_2():
           ]
     """
     return [['*' for _ in range(10)] for _ in range(10)]
-
-def loops_3():
-    """Make a rising block of numbers.
-
-    Return this:
-    [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
-        ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2'],
-        ['3', '3', '3', '3', '3', '3', '3', '3', '3', '3'],
-        ['4', '4', '4', '4', '4', '4', '4', '4', '4', '4'],
-        ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5'],
-        ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6'],
-        ['7', '7', '7', '7', '7', '7', '7', '7', '7', '7'],
-        ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8'],
-        ['9', '9', '9', '9', '9', '9', '9', '9', '9', '9']
-    ]
-    remember that range(10) produces a list of numbers from 0...9
-    So for every step produced by `for i in range(10):` i is a different number
-    TIP: notice that this needs to to return strings of numbers,
-         so call str(number) to cast.
-    """
-    return None
 
 def loops_3():
     """Make a rising block of numbers.
@@ -318,7 +213,6 @@ def loops_6():
         result.append(row)
     return result
 
-
 def loops_7():
     """Make a pyramid.
 
@@ -340,40 +234,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return
-
-def loops_7():
-    """Make a pyramid.
-
-    Return this:
-    [
-        [' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' '],
-        [' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' '],
-        [' ', ' ', '*', '*', '*', '*', '*', ' ', ' '],
-        [' ', '*', '*', '*', '*', '*', '*', '*', ' '],
-        ['*', '*', '*', '*', '*', '*', '*', '*', '*']
-    ]
-    or in more simple terms:
-            *
-          * * *
-        * * * * *
-      * * * * * * *
-    * * * * * * * * *
-    (this is what will print when you test from inside this file)
-    This is a hard problem. Use lots of experimentation and draw
-    lots of diagrams!
-    """
-    pyramid = []
-    # Determine the number of rows in the pyramid
     rows = 5
-    # Iterate through each row
+    pyramid = []
     for i in range(rows):
-        # Determine the number of spaces and stars for the current row
-        spaces = rows - i - 1
-        stars = 2 * i + 1
-        # Create the current row
-        row = [' '] * spaces + ['*'] * stars + [' '] * spaces
-        # Add the row to the pyramid
+        row = [' '] * (rows - i - 1) + ['*'] * (2 * i + 1) + [' '] * (rows - i - 1)
         pyramid.append(row)
     return pyramid
 
