@@ -132,8 +132,8 @@ def the_chain_gang_5(the_value) -> bool:
     TIP: you've already written a function that returns True if the value is 5
     TIP: you've already written a function that subtracts 5
     """
-    result = the_value + give_me_five
-    return (result + give_me_five) == take_five
+    result = take_five(the_value)
+    return is_it_5(result)
 
 
 
@@ -206,9 +206,15 @@ def make_filler_text_dictionary() -> dict:
     (i.e. 3, 4, 5, 6, 7 and 4 words for each)
     TIP: you'll need the requests library
     """
+import requests
 
+def make_filler_text_dictionary() -> dict:
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
+    
+    for length in range(3, 8):
+        words = [requests.get(url + str(length)).text for _ in range(4)]
+        wd[length] = words
 
     return wd
 
@@ -224,11 +230,30 @@ def random_filler_text(number_of_words=200) -> str:
         e.g. random.randint(low, high)
     """
 
-    my_dict = make_filler_text_dictionary()
+import random
 
+def random_filler_text(number_of_words=200) -> str:
+    my_dict = make_filler_text_dictionary()
     words = []
 
+    for _ in range(number_of_words):
+        length = random.randint(3, 7)
+        words.append(random.choice(my_dict[length]))
+
     return " ".join(words)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def fast_filler(number_of_words=200) -> str:
@@ -246,10 +271,30 @@ def fast_filler(number_of_words=200) -> str:
     it'll convert integer keys to strings.
     If you get this one to work, you are a Very Good Programmer™!
     """
-
     fname = "dict_cache.json"
 
-    return None
+    if os.path.exists(fname):
+        with open(fname, "r") as file:
+            word_dict = json.load(file)
+            word_dict = {int(k): v for k, v in word_dict.items()}
+    else:
+        word_dict = make_filler_text_dictionary()
+        with open(fname, "w") as file:
+            json.dump(word_dict, file)
+
+    words = []
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 7)
+        word = random.choice(word_dict[word_length])
+        words.append(word)
+
+    paragraph = " ".join(words)
+    paragraph = paragraph.capitalize() + "."
+    
+    return paragraph
+
+
+
 
 
 if __name__ == "__main__":
@@ -258,6 +303,7 @@ if __name__ == "__main__":
         "strong_password_please",
         password_please(),
         type(password_please()) == str,
+
     )
     print("int_list_please", int_list_please(), type(int_list_please()) == list)
     print(
