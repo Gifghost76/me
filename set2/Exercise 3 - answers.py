@@ -36,16 +36,21 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    if moves == should_move:
+    #moves = true yes
+    #should_move = true yes
+
+    #not moves = false no 
+    #not should_move = false no
+
+    if moves and should_move:
         return "No Problem"
-    elif should_move:
-        return "Duct Tape"
-    else:
+    elif moves and not should_move:
         return "WD-40"
-print(fix_it(moves=True, should_move=True))   # Output: "No Problem"
-print(fix_it(moves=True, should_move=False))  # Output: "Duct Tape"
-print(fix_it(moves=False, should_move=True))  # Output: "WD-40"
-print(fix_it(moves=False, should_move=False)) # Output: "No Problem"
+    elif not moves and should_move:
+        return "Duct Tape"
+    
+    else:
+        return "No Problem"
 
 
 def loops_preview():
