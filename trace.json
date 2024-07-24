@@ -326,7 +326,7 @@
   "7",
   {
     "of_total": 38,
-    "mark": 9,
+    "mark": 16,
     "results": [
       {
         "value": 1,
@@ -349,32 +349,32 @@
         "name": "\nstring_list_please:\n    given:    * no args *\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "\ndictionary_please:\n    given:    * no args *\n    expected: True\n    got:      False"
+        "value": 1,
+        "name": "\ndictionary_please:\n    given:    * no args *\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "\nis_it_5:\n    given:    5\n    expected: True\n    got:      None"
+        "value": 1,
+        "name": "\nis_it_5:\n    given:    5\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "\nis_it_5:\n    given:    4\n    expected: False\n    got:      None"
+        "value": 1,
+        "name": "\nis_it_5:\n    given:    4\n    expected: False\n    got:      False"
       },
       {
-        "value": 0,
-        "name": "\nis_it_5:\n    given:    cats\n    expected: False\n    got:      None"
+        "value": 1,
+        "name": "\nis_it_5:\n    given:    cats\n    expected: False\n    got:      False"
       },
       {
-        "value": 0,
-        "name": "\ntake_five:\n    given:    5\n    expected: 0\n    got:      None"
+        "value": 1,
+        "name": "\ntake_five:\n    given:    5\n    expected: 0\n    got:      0"
       },
       {
-        "value": 0,
-        "name": "\ntake_five:\n    given:    10\n    expected: 5\n    got:      None"
+        "value": 1,
+        "name": "\ntake_five:\n    given:    10\n    expected: 5\n    got:      5"
       },
       {
-        "value": 0,
-        "name": "\ntake_five:\n    given:    0\n    expected: -5\n    got:      None"
+        "value": 1,
+        "name": "\ntake_five:\n    given:    0\n    expected: -5\n    got:      -5"
       },
       {
         "value": 0,
