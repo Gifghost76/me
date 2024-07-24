@@ -278,12 +278,9 @@ def fast_filler(number_of_words=200) -> str:
         words.append(word)
 
     paragraph = " ".join(words)
-    paragraph = paragraph.capitalize() + "."
-    
-    return paragraph
+    final_answer = paragraph[1].upper() + paragraph[1:] + "."
 
-
-
+    return final_answer
 
 
 if __name__ == "__main__":
