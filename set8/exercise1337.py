@@ -218,18 +218,6 @@ def make_filler_text_dictionary() -> dict:
 
     return wd
 
-
-def random_filler_text(number_of_words=200) -> str:
-    """Make a paragraph of random filler text.
-    Using the dictionary returned by make_filler_text_dictionary, make a
-    paragraph of text using randomly picked words. Each word should be a random
-    length, and a random one of the words.
-    Make the paragraph have number_of_words words in it.
-    Return it as a string
-    TIP: you'll need the random library,
-        e.g. random.randint(low, high)
-    """
-
 import random
 
 def random_filler_text(number_of_words=200) -> str:
