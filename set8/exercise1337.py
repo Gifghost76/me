@@ -132,16 +132,11 @@ def the_chain_gang_5(the_value) -> bool:
     TIP: you've already written a function that returns True if the value is 5
     TIP: you've already written a function that subtracts 5
     """
+    result = the_value + give_me_five
+    return (result + give_me_five) == take_five
 
 
-def subtract_5(n) -> int:
-    return n (take_five)
 
-def is_5(n) -> bool:
-    return n == (give_me_five)
-
-def the_chain_gang_5(the_value) -> bool:
-    return is_5(subtract_5(the_value))
 
 
 def pet_filter(letter="a") -> list:
@@ -159,7 +154,18 @@ def pet_filter(letter="a") -> list:
     ]
     # fmt: on
     filtered = []
-
+def pet_filter(letter="a") -> list:
+    pets = [
+        "dog", "goat", "pig", "sheep", "cattle", "zebu", "cat", "chicken", 
+        "guinea pig", "donkey", "duck", "water buffalo", "python", "scorpion",
+        "western honey bee", "dromedary camel", "horse", "silkmoth", 
+        "pigeon", "goose", "yak", "bactrian camel", "llama", "alpaca", 
+        "guineafowl", "ferret", "muscovy duck", "barbary dove", "cichlid",
+        "bali cattle", "gayal", "turkey", "goldfish", "rabbit", "koi", 
+        "canary", "society finch", "fancy mouse", "siamese fighting fish", 
+        "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"
+    ]
+    return [pet for pet in pets if letter in pet]
     return filtered
 
 
@@ -172,11 +178,8 @@ def best_letter_for_pets() -> str:
     TIP: you've seen this before in the pokedex.
     """
     import string
-
     the_alphabet = string.ascii_lowercase
-    most_popular_letter = ""
-
-    return most_popular_letter
+    return max(the_alphabet, key=lambda letter: len(pet_filter(letter)))
 
 
 def make_filler_text_dictionary() -> dict:

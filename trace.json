@@ -326,7 +326,7 @@
   "7",
   {
     "of_total": 38,
-    "mark": 25,
+    "mark": 29,
     "results": [
       {
         "value": 1,
@@ -422,35 +422,35 @@
       },
       {
         "value": 0,
-        "name": "\nthe_chain_gang_5:\n    given:    [10]\n    expected: True\n    got:      'int' object is not callable"
+        "name": "\nthe_chain_gang_5:\n    given:    [10]\n    expected: True\n    got:      unsupported operand type(s) for +: 'int' and 'function'"
       },
       {
         "value": 0,
-        "name": "\nthe_chain_gang_5:\n    given:    [11]\n    expected: False\n    got:      'int' object is not callable"
+        "name": "\nthe_chain_gang_5:\n    given:    [11]\n    expected: False\n    got:      unsupported operand type(s) for +: 'int' and 'function'"
       },
       {
         "value": 0,
         "name": "\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f check that the_chain_gang_5 doesn't use =="
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f check that the_chain_gang_5 doesn't use -"
       },
       {
-        "value": 0,
-        "name": "\npet_filter:\n    given:    x\n    expected: ['red fox']\n    got:      []"
+        "value": 1,
+        "name": "\npet_filter:\n    given:    x\n    expected: ['red fox']\n    got:      ['red fox']"
       },
       {
         "value": 1,
         "name": "\npet_filter:\n    given:    q\n    expected: []\n    got:      []"
       },
       {
-        "value": 0,
-        "name": "\npet_filter:\n    given:    p\n    expected: ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']\n    got:      []"
+        "value": 1,
+        "name": "\npet_filter:\n    given:    p\n    expected: ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']\n    got:      ['pig', 'sheep', 'guinea pig', 'python', 'scorpion', 'pigeon', 'alpaca', 'guppy']"
       },
       {
-        "value": 0,
-        "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      "
+        "value": 1,
+        "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      e"
       },
       {
         "value": 0,
