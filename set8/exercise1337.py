@@ -23,19 +23,17 @@ def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    def get_password():
-    password = "Moredonuts!"
-    return password
+    return "MmmmDonuts"
 
 
 def list_please() -> list[Any]:
     """Returns a list, you can put anything in the list."""
-    return None
+    return [1, 2, 3]
 
 
 def int_list_please() -> list[int]:
     """Returns a list of integers, any integers are fine."""
-    return None
+    return [1, 2, 3]
 
 
 def string_list_please() -> list[str]:
