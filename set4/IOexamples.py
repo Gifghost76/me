@@ -81,7 +81,14 @@ def bury_time_capsule(something_for_your_kids_to_find, file_path):
         return True
     except Exception as e:
         print(e)
+    try:
+        with open(file_path, 'w') as file:
+            json.dump(something_for_your_kids_to_find, file)
+        return True
+    except Exception as e:
+        print(e)
         return False
+
 
 
 message_for_capsule = {

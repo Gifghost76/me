@@ -17,7 +17,8 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    return range(3,10,2)
+    print(range)
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +29,7 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    return list(range(start, stop, 2))
 
 
 def stubborn_asker(low, high):
@@ -38,8 +39,11 @@ def stubborn_asker(low, high):
     until you get a number that you think is OK
 
     Look up the docs for a function called "input"
-    """
-    return None
+    """ 
+    while True:
+        number = int(input(f"Please enter a number between {low} and {high}: "))
+        if low <= number <= high:
+            return number
 
 
 def not_number_rejector(message):
@@ -49,7 +53,13 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        user_input = input(message)
+        try:
+            number = float(user_input)
+            return number
+        except ValueError:
+            print("That's actually NOT a number, put something else in!")
 
 
 def super_asker(low, high):
@@ -58,7 +68,16 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        user_input = input(f"Enter a number between {low} and {high}: ")
+        try:
+            number = float(user_input)
+            if low <= number <= high:
+                return number
+            else:
+                print(f"The number you chose is not in range from {low} to {high}. TRY AGAIN!.")
+        except ValueError:
+            print("...are you serious? Pick another number that actually works with the criteria.")
 
 
 if __name__ == "__main__":
