@@ -326,7 +326,7 @@
   "7",
   {
     "of_total": 38,
-    "mark": 8,
+    "mark": 9,
     "results": [
       {
         "value": 1,
@@ -345,8 +345,8 @@
         "name": "\nint_list_please:\n    given:    * no args *\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "\nstring_list_please:\n    given:    * no args *\n    expected: True\n    got:      False"
+        "value": 1,
+        "name": "\nstring_list_please:\n    given:    * no args *\n    expected: True\n    got:      True"
       },
       {
         "value": 0,

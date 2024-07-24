@@ -38,7 +38,7 @@ def int_list_please() -> list[int]:
 
 def string_list_please() -> list[str]:
     """Returns a list of strings, any string are fine."""
-    return None
+    return ["Moves", "Like", "Jagger"]
 
 
 def dictionary_please() -> dict:
