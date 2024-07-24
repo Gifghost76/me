@@ -103,10 +103,8 @@ def fizz_buzz() -> list:
          'Fizz', 'Buzz',  11, 'Fizz', 13, 14,
          'FizzBuzz', 16, 17, ...]
     """
-    fizz_buzz_list = []
-    # your code here
-
-    return fizz_buzz_list
+def fizz_buzz() -> list:
+    return ['FizzBuzz' if i % 15 == 0 else 'Fizz' if i % 3 == 0 else 'Buzz' if i % 5 == 0 else i for i in range(1, 101)]
 
 
 def set_it_on_fire(input_string="very naughty boy") -> str:
@@ -120,8 +118,8 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
-
-    return None
+def set_it_on_fire(input_string="very naughty boy") -> str:
+    return '🔥' + '🔥'.join(input_string.upper()) + '🔥'
 
 
 def the_chain_gang_5(the_value) -> bool:
@@ -135,7 +133,15 @@ def the_chain_gang_5(the_value) -> bool:
     TIP: you've already written a function that subtracts 5
     """
 
-    return None
+
+def subtract_5(n) -> int:
+    return n (take_five)
+
+def is_5(n) -> bool:
+    return n == (give_me_five)
+
+def the_chain_gang_5(the_value) -> bool:
+    return is_5(subtract_5(the_value))
 
 
 def pet_filter(letter="a") -> list:
