@@ -245,17 +245,6 @@ def random_filler_text(number_of_words=200) -> str:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 def fast_filler(number_of_words=200) -> str:
     """Makes filler text, but really fast.
 
